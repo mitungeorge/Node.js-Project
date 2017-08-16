@@ -1,0 +1,10 @@
+extends layout
+
+block content
+      h1 #{title}
+      ul.list-group
+        each article, i in articles
+          li.list-group-item(style="background-color:transparent;")
+              h5
+                center
+                  a(href='/article/'+article._id style="font-weight:bold;color:black")= article.title

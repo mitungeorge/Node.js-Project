@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  if user
+    if user.id==article.author
+      a.btn.btn-danger.btn-md.edit.del(href='#',data-id=article._id) Delete
+      |
+      a.btn.btn-primary.btn-md.edit(href='/article/edit/'+article._id) Edit
+  br
+  .well(style="background-color:transparent;border:none")
+    h1= article.title
+    h5 Written by #{author}
+    p= article.body
+  center
+    a.btn.btn-info.btn-md(href='/')
+      span.glyphicon.glyphicon-arrow-left
+        |  Back
