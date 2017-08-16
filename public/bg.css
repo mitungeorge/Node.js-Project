@@ -49,3 +49,13 @@ html, body {
 .alert-error{
   background-color: #b5803d;
 }
+
+.line{
+   white-space: pre-line;
+}
+
+.dis{
+  background-color: transparent;
+  border:none;
+  font-family:inherit;
+}

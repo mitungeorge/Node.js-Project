@@ -10,7 +10,8 @@ block content
   .well(style="background-color:transparent;border:none")
     h1= article.title
     h5 Written by #{author}
-    p= article.body
+    pre.dis
+      p= article.body
   center
     a.btn.btn-info.btn-md(href='/')
       span.glyphicon.glyphicon-arrow-left

@@ -144,7 +144,7 @@ if(errors){
   article.title = req.body.title;
   article.author = req.user._id;
   article.body = req.body.body;
-
+  
   article.save(function(err){
     if(err){
       console.log(err);return;
