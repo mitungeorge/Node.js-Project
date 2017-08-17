@@ -1,6 +1,7 @@
 html, body {
   height: 96.3%;
   width: 100%;
+  counter-reset: Serial;
 }
 
 .blok {
@@ -51,6 +52,10 @@ html, body {
   background-color: #b5803d;
 }
 
+.alert-danger{
+  background-color: #d0a385;
+}
+
 .line{
    white-space: pre-line;
 }
@@ -59,4 +64,35 @@ html, body {
   background-color: transparent;
   border:none;
   font-family:inherit;
+}
+
+tr td:first-child:before
+{
+  counter-increment: Serial;
+  content: counter(Serial);
+}
+
+.dTable, .dTable td{
+   border-color: black;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #060404;
+}
+
+.table-nonfluid {
+   width: 100% !important;
+
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #8a8887;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #3a3838;
 }

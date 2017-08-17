@@ -7,9 +7,11 @@ block content
       |
       a.btn.btn-primary.btn-md.edit(href='/article/edit/'+article._id) Edit
   br
-  .well(style="background-color:transparent;border:none")
+  br
+  .well(style="background-color:transparent;border-color:black")
     h1= article.title
     h5 Written by #{author}
+    h5 Created on #{article.created_date}
     pre.dis
       p= article.body
   center

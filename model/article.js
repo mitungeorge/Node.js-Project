@@ -12,8 +12,11 @@ let articleSchema = mongoose.Schema({
   body: {
     type: String,
     required: true
+  },
+  created_date: {
+    type: String,
+    required: true
   }
-
 });
 
 let Article = module.exports = mongoose.model('Article',articleSchema);

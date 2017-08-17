@@ -2,9 +2,23 @@ extends layout
 
 block content
       h1 #{title}
-      ul.list-group
+      table.table
+        thead.thead-inverse
+          tr.dTable
+            th #
+            th
+              center NAME
+            th
+              center CREATED_DATE
+        tbody.dTable
         each article, i in articles
-          li.list-group-item(style="background-color:transparent;")
+          tr.dTable
+            td.dTable
+              center
+            td
               h5
                 center
                   a(href='/article/'+article._id style="font-weight:bold;color:black")= article.title
+            td
+              center
+                h5 #{article.created_date}
