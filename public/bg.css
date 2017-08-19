@@ -1,17 +1,22 @@
 html, body {
-  height: 96.3%;
+  height: 100%;
   width: 100%;
   counter-reset: Serial;
 }
 
 .blok {
   min-height: 100%;
-  background-image: url('bg.jpg');
+  background-image: url('beach.jpg');
   background-size: cover;
   background-attachment: fixed;
    background-position: center center;
 }
 
+.profile-image{
+  margin-top: 5px;
+  height:40px;
+  width:40px;
+}
 
 .navbar {
     position: relative;
@@ -95,4 +100,12 @@ tr td:first-child:before
     line-height: 1.42857143;
     vertical-align: top;
     border-top: 1px solid #3a3838;
+}
+.navbar-form{
+  margin-bottom: -42px;
+}
+
+.input-group{
+  /*left:550px;*/
+  right:0;
 }

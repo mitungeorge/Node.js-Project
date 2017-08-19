@@ -106,6 +106,8 @@ app.get('/article/:id',function(req,res){
   });
 });
 
+
+
 function ensureAuthenticated(req,res,next){
   if(req.isAuthenticated()){
     return next();
@@ -229,6 +231,24 @@ app.delete('/article/:id', function(req,res){
       });
 
     }
+  });
+});
+
+app.post('/article/search',function(req,res){
+  res.locals.user=req.user;
+  var g= req.body.search;
+  //var query = {"title": {$regex: ".*" + g + ".*"}};
+  var query = {title:{'$regex' : '^'+g, '$options' : 'i'}};
+  Article.find(query,function(err,articles){
+    if(err){
+      console.log(err);
+    }
+    else{
+      res.render('search',{
+        sarticles: articles
+      });
+    }
+
   });
 });
 

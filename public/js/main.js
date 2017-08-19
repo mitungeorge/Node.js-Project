@@ -14,4 +14,13 @@ $(document).ready(function(){
       }
     });
   });
+
+  // $(".search").click(function(event)
+  // {
+  // //  event.preventDefault(); // cancel default behavior
+  //
+  //
+  //
+  //   //... rest of add logic
+  // });
 });
